@@ -46,6 +46,21 @@ public class RomanNumeralParser {
         int CCount = 0;
         int MCount = 0;
 
+        // for (String[] pattern : patterns){
+        //     while(!remainingInput.isEmpty()){
+        //         //check if current character is the same as the last character
+        //         if(remainingInput.startsWith(pattern[0])){
+        //             tokens.add(pattern[1]);
+        //             remainingInput = remainingInput.substring(pattern[0].length());
+        //             if(!remainingInput.startsWith(pattern[0]))
+        //                 break;
+        //         }
+        //     }
+        // }
+        // if(!remainingInput.isEmpty()){
+        //     throw new IllegalArgumentException("Invalid Roman numeral: " + romanNumeral);
+        // }
+
         while (!remainingInput.isEmpty()) {
             boolean matchFound = false;
             for (String[] pattern : patterns) {
