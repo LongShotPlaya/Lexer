@@ -193,9 +193,9 @@ public class RomanNumeralParser {
     public static void main(String[] args) {
         parse("XXXVIII");
         parse("MCMDCDCXCLXLXIXVIVI");
-        parse("VVL");
         parse("XXXX");
         parse("MMMM");
+        parse("IIV");
         parse("abc"); // non-Roman Numerals
     }
 }
