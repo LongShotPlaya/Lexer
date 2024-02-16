@@ -99,8 +99,13 @@ public class RomanNumeralParser {
                         
                         // Validation
                         if (ICount > 3 || XCount > 3 || CCount > 3 || MCount > 3) {
-                            throw new IllegalArgumentException("No character can repeate itself more than 3 times: " + romanNumeral);
+                            throw new IllegalArgumentException("No character can repeat itself more than 3 times: " + romanNumeral);
                         }
+                    }
+                    
+                    // Check if token can be added without violating the descending order rule
+                    if (!tokens.isEmpty() && Integer.parseInt(token) > Integer.parseInt(tokens.get(tokens.size() - 1))) {
+                        throw new IllegalArgumentException("Invalid order of Roman numerals: " + romanNumeral);
                     }
                     
                     tokens.add(token);
